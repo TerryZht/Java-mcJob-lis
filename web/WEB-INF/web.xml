@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+        <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+    <!--初始化-->
+    <servlet>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>com.job.Servlet.InitServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/InitServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--注册-->
+    <servlet>
+        <servlet-name>URLMapServlet</servlet-name>
+        <servlet-class>com.job.Servlet.URLMapServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/regist.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>com.job.Servlet.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/mooc/RegistServlet.do</url-pattern>
+    </servlet-mapping>
+    
+    <!--server-->
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/server.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/mooc/top.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/mooc/left.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/mooc/catgory.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/mooc/addBood.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>URLMapServlet</servlet-name>
+        <url-pattern>/mooc/showBooks.do</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
