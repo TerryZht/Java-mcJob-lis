@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Objects;
 
-public class RegisterBiz {
+public class RegisterBiz { 
     //TODO:continue
     public static boolean addUser(HttpServletRequest req, HttpServletResponse resp){
         String username = req.getParameter("username");
