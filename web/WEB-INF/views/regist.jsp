@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td>确认密码</td>
-                <td><input type="password" name="checkPWD" placeholder="密码长度为6-12位的纯数字" "></td>
+                <td><input type="password" name="checkPWD" placeholder="密码长度为6-12位的纯数字" id="checkPWD"></td>
             </tr>
             <tr>
                 <td>手机号码</td>
@@ -39,4 +39,7 @@
 </center>
 
 </body>
+<script>
+
+</script>
 </html>

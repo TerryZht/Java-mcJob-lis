@@ -6,6 +6,34 @@
     <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
+    
+    <!--encoding filter-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.job.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--loginfilter-->
+    <!--TODO:现有loginfilter开关是关闭的-->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.job.filter.LoginFilter</filter-class>
+        <init-param>
+            <param-name>openValue</param-name>
+            <param-value>NO</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/server.do</url-pattern>
+    </filter-mapping>
     <!--初始化-->
     <servlet>
         <servlet-name>InitServlet</servlet-name>
@@ -61,6 +89,35 @@
         <url-pattern>/mooc/showBooks.do</url-pattern>
     </servlet-mapping>
 
+    <!--login-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.job.Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
 
 
+    <!--add catgory-->
+    <servlet>
+        <servlet-name>AddCatgoryServlet</servlet-name>
+        <servlet-class>com.job.Servlet.AddCatgoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCatgoryServlet</servlet-name>
+        <url-pattern>/mooc/addcatgory</url-pattern>
+    </servlet-mapping>
+
+    
+    <!--addnewbook-->
+    <servlet>
+        <servlet-name>AddNewBookServlet</servlet-name>
+        <servlet-class>com.job.Servlet.AddNewBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddNewBookServlet</servlet-name>
+        <url-pattern>/mooc/addNewBook.do</url-pattern>
+    </servlet-mapping>
 </web-app>

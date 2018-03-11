@@ -1,4 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+  String reguser = request.getParameter("reguser");
+    request.setAttribute("reguser",reguser);
+%>
 <html>
   <head>
     <title>图书后台管理登录界面</title>
@@ -10,7 +15,15 @@
       <table width="350px" cellspacing="0px" cellpadding="0px" border="1px">
         <tr>
           <td>用户名</td>
-          <td><input type="text" name="username" placeholder="用户名为3-12位字母数字或下划线组合" ></td>
+          <c:choose>
+            <c:when test="${reguser!=null}">
+              <td><input type="text" name="username" value="${reguser}" ></td>
+            </c:when>
+              <c:otherwise>
+                <td><input type="text" name="username" placeholder="用户名为3-12位字母数字或下划线组合" ></td>
+              </c:otherwise>
+          </c:choose>
+
         </tr>
         <tr>
           <td>密&nbsp;码</td>

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <base href="">
@@ -8,7 +9,7 @@
 <body>
 <center>
     <h1>图书添加</h1>
-    <form action="/AddBookServlet" method="post">
+    <form action="/mooc/addNewBook.do" method="post">
         <table width="400px" cellspacing="0px" cellpadding="0px" border="1px">
             <tr>
                 <td>图书ID</td>
